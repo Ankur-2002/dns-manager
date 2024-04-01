@@ -21,6 +21,7 @@ const UserSchema = new mongoose.Schema({
   },
   compartmentId: {
     type: String,
+    unique: false,
   },
   createDate: {
     type: Date,
