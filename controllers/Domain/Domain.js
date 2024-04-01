@@ -62,7 +62,7 @@ const createDomain = catchAsync(async (req, res) => {
 
 const getDomains = catchAsync(async (req, res) => {
   if (!req.user.compartmentId) {
-    return res.status(400).json({ domain: [] });
+    return res.status(200).json({ domain: [] });
   }
 
   const zones = await dnsClient.listZones({
